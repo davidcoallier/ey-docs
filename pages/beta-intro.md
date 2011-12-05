@@ -1,34 +1,37 @@
-# Engine Yard Beta Program
+# Engine Yard Early Access and Labs
 
+**Important!** Always test Early Access (Alpha or Beta) and Engine Yard Labs features very carefully in a development or staging environment.
 
-<p >
-  <img id="beta-logo" src="images/ey-beta-logo.png" >
-  Deploying, automating and managing a Rails application is constantly
-  changing. New stack elements, new features in AppCloud and xCloud, 
-  and new tools to help development are released often. We think many of 
-  these features will be interesting to our customers whilst they are still 
-  in development.  If you are interested in testing out beta features on
-  AppCloud, read on for more information!
-</p>
+No features are in Beta. 
 
-**There are four parts to our Beta Program:**
+These features are in **Alpha**:  
 
-  * Beta Announcements
-  * Beta Conversations
-  * Alpha features and improvements
-  * Beta features and improvements
+* [[High availability|environment-high-availability]] - [[Sign up|signup-high-availability]]
+* [[Ruby 1.9.3|ruby-193]] - [[Sign up|signup-ruby193]]
+* [[MySQL 5.1 and 5.5|database-mysql-upgrade]] - [[Sign up|signup-mysql]]
+* [[PostgreSQL 9|postgresql]] - [[Sign up|signup-postgresql]]
+* [[Rubinius|rubinius]] - [[Sign up|signup-rubinius]]
 
-Access to the Beta program **does not** require an Engine Yard Support 
-agreement. Each new beta feature has its own support channel 
-(see below).  We appreciate any feedback received during the beta program.
-Feedback received helps us refine our beta technology to provide a better 
-experience for our customers.
+Sign up to get access to Alpha features. The high availability, MySQL, and PostgreSQL features require full accounts. If you have a trial account and want to upgrade to a full account, see [[Upgrading free trial account|upgrading-free-trial-to-full-account]].
 
-In advance, we want to thank you for your participation and we appreciate your feedback!
+This feature is in **Labs**:
 
-## Beta Announcements
+* [[Node.js|deploy-node]] - [[Sign up|signup-node]]
 
-We will only notify people about new features via one mailing list. If you want to be notified please join the [[Beta Announcements|http://groups.google.com/group/ey-beta-announce]] Google group below.
+## Get instant access to Alpha and Labs features
+
+If you have a full Engine Yard account, you can access Alpha and Labs features from your Account Settings page instead of through the signup pages above.
+
+<b>To access Alpha and Engine Yard Labs features (full account users only)</b>
+
+1. Navigate to Accounts > Account Settings.
+2. If you have multiple accounts, click an account name.
+2. Click Manage Early Access Features (under Services at the bottom of the page).
+3. Enable the Early Access features that you want to try.
+
+## Get notified about Early Access and Labs features
+
+We notify people about Early Access and Labs features via one mailing list. If you want to be notified, join the [[Beta Announcements|http://groups.google.com/group/ey-beta-announce]] Google group below.
 
 <html>
 <table border=0 style="background-color: #fff; padding: 5px; width: 300px;" cellspacing=0>
@@ -47,9 +50,10 @@ We will only notify people about new features via one mailing list. If you want 
 </table>
 </html>
 
-## Beta Conversations
+## Get help or provide feedback
 
-If you have any issues or questions about an Alpha or Beta feature please use the [[Beta Conversations|http://groups.google.com/group/ey-beta-talk]] Google group below.
+If you have any issues or questions about an Early Access or Labs feature, use the [[Beta Conversations|http://groups.google.com/group/ey-beta-talk]] Google group below.  
+**Note:** Do not request support for Early Access or Labs features through the normal support channels.
 
 <html>
 <table border=0 style="background-color: #fff; padding: 5px; width: 300px;" cellspacing=0>
@@ -69,31 +73,21 @@ If you have any issues or questions about an Alpha or Beta feature please use th
 </table>
 </html>
 
-## Alpha Features
 
-"Alpha" features have been implemented with the minimum required functionality, they may still be in development, they may use Open Source technology that itself is not qualified as "production-ready"; but hey, some customers want it sooner than later and are happy to help us iron out any missing aspects. 
 
-For this reason we created a way for a small handful of our customers to help us, and for us to help you, on each new feature. We call them Alpha Features.
 
-For Open Source stack items, the underlying technology might be rock solid but it might be classed as an "Alpha Feature" because it is relatively new to the Engine Yard Technology Stack. Once a few customers have trialled it and given it the green light, and we've finished our documentation and Support training, we'll move it to Beta and beyond.
+##About Beta features
 
-Alpha features are currently available to test on an as requested basis for customers who are willing to help us move these important features forward from Alpha to Beta.
+When a feature is nearly ready for Production applications; has been used and verified by some Engine Yard Cloud users; has documentation; and a trained Support team, then we promote it from Alpha to Beta.
 
-Alpha features carry a **warning: do not request support via the normal support channels**.
+##About Alpha features
 
-Current Alpha Features (and how to request access):
+Alpha features have been implemented with the minimum required functionality; might still be in development; might use Open Source technology that is not "production-ready". 
 
-* [[PostgreSQL 9|postgresql]] - [[Request access|signup-postgresql]]
-* [[Rubinius]] - [[Request access|signup-rubinius]]
+For Open Source stack Alpha features, the underlying technology might be solid but the feature is Alpha because it is new to the Engine Yard Technology Stack.
 
-## Beta Features
+Alpha features are available on request for users who want to test and help improve the features.
 
-When we feel a feature is close to being ready for Production applications, has been used and verified by a handful of Engine Yard customers, has a set of documentation and our Support team is being trained on the feature/technology, we can promote the feature from "Alpha" to "Beta".
+##About Labs features
 
-Beta features are visible and usable by all Engine Yard customers (as applicable AppCloud and xCloud) but carry a **warning: do not request support via the normal support channels**. 
-
-For each Beta feature there is the [[Beta Conversations|http://groups.google.com/group/ey-beta-talk]] group to discuss bugs, issues, and feature requests with Engine Yard staff and other Engine Yard customers.
-
-Current Beta feature:
-
-  * [[JRuby/Trinidad|jruby-beta]]
+Labs features are experimental features that Engine Yard makes available to developers. Some Labs features might later be incorporated into our product; some might remain as Labs features; and some tried and then deprecated. 

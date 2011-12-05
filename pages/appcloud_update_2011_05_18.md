@@ -1,14 +1,14 @@
-# AppCloud updates May 2011
+# Engine Yard AppCloud updates May 2011 
 
 This page describes the action-required update of May 18th, 2011. (This is not a complete listing of updates in May.)
 
-**Important!** If you are currently using keep files or custom recipes, you need to take action before upgrading in order to keep everything working. See "[What do I have to do?](http://docs.engineyard.com/appcloud_update_2011_05_18.html#what)" below.
+**Important!** If you are currently using keep files or custom recipes, you need to take action before upgrading in order to keep everything working. See "[[What do I have to do?|appcloud_update_2011_05_18.html#what]]" below.
 
 ## What's changed?
 
 General Changes
 
-* Ruby 1.8.6 upgraded to p420
+* Ruby 1.8.6 upgraded to p420Cloud
 * "reconnect:true" added to database.yml
 * Passenger 3 Beta environments upgraded to 3.0.7
 * Added systat, lsof, and strace cookbooks
@@ -94,34 +94,31 @@ For example:
 
 * Slow (with embedded if's):
 
-```bash
-if ($host != 'your_domain.com') {
-	rewrite ^/(.*)$ http://your_domain.com/$1 permanent;
-}
+        if ($host != 'your_domain.com') {
+        	rewrite ^/(.*)$ http://your_domain.com/$1 permanent;
+        }
+        
+        if ($host ~* "www") {
+        	rewrite ^(.*)$ http://www.domain.com;
+        	break;
+        }
 
-if ($host ~* "www") {
-	rewrite ^(.*)$ http://www.domain.com;
-	break;
-}
-```
 	
 * Fast (with a new server block for all rewrites):
 
-```bash	
-server {
-	listen 80 default;
-	server_name _;
-	rewrite ^ http://www.domain.com;
-	...other rewrites...
-}
-```
+        server {
+        	listen 80 default;
+        	server_name _;
+        	rewrite ^ http://www.domain.com;
+        	...other rewrites...
+        }
 
 For help understanding if, see [How if works](http://agentzh.blogspot.com/2011/03/how-nginx-location-if-works.html) and the [nginx docs](http://wiki.nginx.org/NginxHttpRewriteModule#if).
 
 **To refactor your rewrite directives:**
 
 1. Review your rewrite directives.
-2. Using the dashboard, make sure you have specified a domain name for all applications running in your environment.
+2. Using the Dashboard, make sure you have specified a domain name for all applications running in your environment.
 3. Refactor your rewrites into a default server block based on the above example.
 4. Test on a staging environment before deploying to production.
 

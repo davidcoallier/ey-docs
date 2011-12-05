@@ -1,12 +1,12 @@
-# Diagnosing Errors on Engine Yard AppCloud
+# Diagnosing Errors on Engine Yard Cloud
 
-This document describes some common error conditions you might see while setting up your Engine Yard AppCloud environment.
+This document describes some common error conditions you might see while setting up your Engine Yard Cloud environment.
 
 ## Common Error Conditions
 
 ### 1. Insufficient Capacity Error
 
-This message is displayed when EC2 is unable to provision servers for your environment due to transient overcapacity in your selected availability zone. To get around this, we recommend waiting a few minutes and retrying. If the error persists, you can try a different instance size or availability zone. You can choose a new one from the edit environment page, which is available from the "more options" tab.
+This message is displayed when EC2 is unable to provision servers for your environment due to transient overcapacity in your selected availability zone. To get around this, we recommend waiting a few minutes and retrying. If the error persists, you can try a different instance size or availability zone. You can choose a new one from the Edit Environment page.
 
 ### 2. Gem Not Found Error
 
@@ -18,5 +18,5 @@ The easiest way to use Bundler is to include the Bundler gem (with the appropria
 
 ### 4. Deploy Failed Error
 
-If your deploy fails for other reasons,  you can check the deploy logs for information to help debug the problem. You can locate the "Deploy Logs" tab on your environment in the dashboard. You can scroll down to the bottom of the logs section to see output from the process that caused the deploy failure. If you have multiple instances in the environment, make sure to check the logs of the instance that failed.
+If your deploy fails for other reasons,  you can check the deploy logs for information to help debug the problem. You can locate the "Deploy Logs" tab on your environment in the Dashboard. You can scroll down to the bottom of the logs section to see output from the process that caused the deploy failure. If you have multiple instances in the environment, make sure to check the logs of the instance that failed.
 

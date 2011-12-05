@@ -1,16 +1,16 @@
 # Getting Started
 
-This guide assumes that you have already [[signed up for an EY AppCloud Account|sign-up-for-engine-yard-appcloud]] If you have not yet done so, go ahead and get started now -> [[Engine Yard AppCloud|http://cloud.engineyard.com]]
+This guide assumes that you have already [[signed up for an Engine Yard account|sign-up-for-engine-yard-cloud]] If you have not yet done so, go ahead and get started now -> [[Engine Yard Cloud|http://cloud.engineyard.com]]
 
 ## Application Information
 
-When you first sign up for AppCloud you will need to configure your first application. 
+When you first sign up, you need to configure your first application. 
 
 ![Entering your application's details](images/1sm.png)
 
 We need to have your **Git repository URI** to checkout your code and deploy it to the instance. If you are using GitHub, you can find your Git repository URI here:
 
-![Where to find your Github repository URL](images/2sm.png)
+![Where to find your GitHub repository URL](images/2sm.png)
 
 We will try to guess a good name for your application from the Git URI. If we choose poorly, please enter a better name. 
 
@@ -22,9 +22,9 @@ If you use a private repository, set up your git deploy key. Engine Yard automat
 
 #### To set up a git deploy key
 
-1. In the AppCloud Show Deploy Keys page, copy the git deploy key.
+1. In the Show Deploy Keys page, copy the git deploy key.
 
-    ![Where to find your deploy key on AppCloud](images/3sm.png)
+    ![Where to find your deploy key on Engine Yard Cloud](images/3sm.png)
 
 2. Add the git deploy key to your github repository. 
 
@@ -61,7 +61,7 @@ If you have larger needs right now, please select **Custom** and configure your 
 You can set up various Internet and networking technologies.
 
   * [[IP Addressess|ip-addresses]]
-  * [[SSH Keys and Configuration|ssh-keys-and-configuration]]
+  * [[SSH Keys and Configuration|ssh-intro]]
   * [[SSL Certificates|ssl-certificates]]
 
-Learn more about the different types of [[instances|appcloud-instances]] available to you, including Application, Utility, and Database instances.
+Learn more about the different types of [[instances|instance-types]] available to you, including Application, Utility, and Database instances.

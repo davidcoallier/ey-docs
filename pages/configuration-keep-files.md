@@ -1,4 +1,4 @@
-#Use keep files to customize and maintain configurations on AppCloud
+#Use keep files to customize and maintain configurations on Engine Yard Cloud
 
 A **keep file** gives you the flexibility to modify configuration settings in specific files within the /data and /etc directories of your EBS (Amazon Elastic Block Storage) volume.
 
@@ -12,33 +12,44 @@ These are the files that can be made into keep files.
 
 **Note:** Only this subset of files in the /etc or /data directories can be made into keep files. Other files in these directories might be overwritten or ignored even if they have been prefaced with "keep".  
 
-* /etc/engineyard/collectd.conf
+
 * /data/#{appname}/shared/config/database.yml
-* /etc/haproxy.cfg
-* /etc/monit.d/#{name}#{appname}.monitrc
-* /etc/mysql/my.cnf
+* /data/nginx/nginx.conf
 * /data/nginx/common/proxy.conf
 * /data/nginx/common/servers.conf
 * /data/nginx/common/fcgi.conf
-* /data/nginx/nginx.conf
 * /data/nginx/servers/#{appname}.rewrites
 * /data/nginx/servers/#{appname}.conf
 * /data/nginx/servers/#{appname}.ssl.conf
+* /etc/haproxy.cfg
+* /etc/mysql/my.cnf
 * /etc/conf.d/nginx
+* /etc/engineyard/collectd.conf
 * /etc/redis/redis.conf
-* /etc/monit.d/unicorn_#{app.name}.monitrc
+* /etc/monit.d/unicorn_#{appname}.monitrc
+* /etc/monit.d/#{name}.#{appname}.monitrc
+
 
 <!-- All files in the folders: /data/nginx/servers/ /etc/monit.d/ can be keep files -->
 <!-- Keep files can be especially useful for monit if you're trying to increase the memory limit for mongrels or background processes, etc. -->
 
+## <b>Important!</b> Risks associated with keep files
 
-## To use keep files to customize and maintain AppCloud configurations
+There are risks associated with keep files. Use keep files with caution.
+
+Making a keep file effectively "freezes" the file. If your environment changes, either through changes that you apply yourself or when you upgrade to the latest Engine Yard stack, your keep files can become out-of-date and thus compromise your application. 
+
+Before making changes to a production environment, review your keep files. 
+
+<b>Tip:</b> Where possible, consider using an include file instead of a keep file.
+
+## To use keep files for configuration
 
 1. Connect to your instance via SSH.
 
-2. Edit and rename (to keep._file.name_) any of the files listed above.
+2. Edit the file and rename (to **keep**._filename.extension_) any of the files listed above.
   
-    For example, for an application name "myapp", configure the nginx server by renaming `/data/nginx/servers/myapp.conf` to `/data/nginx/servers/keep.myapp.conf` and then editing this file.
+    For example, for an application name "myapp", configure the nginx server by renaming `/data/nginx/servers/myapp.conf` to `/data/nginx/servers/keep.myapp.conf`
 
 3. If you make nginx.conf or database.yml into keep files, add a deploy hook to create a symlink. 
 
@@ -50,17 +61,17 @@ These are the files that can be made into keep files.
 
 
 <h2 id="topic5"> More information </h2>  
-
-The table contains links to related information in the Engine Yard doc pages.   
-
 <table>
   <tr>
-    <th>For more information about…</th><th>See…</th>
+    <th>For more information about...</th><th>See...</th>
   </tr>
   <tr>
-    <td>SSH in AppCloud</td><td>[[Connect to your instance via SSH|ssh-connect]] </td>
+    <td>SSH</td><td>[[Connect to your instance via SSH|ssh-connect]] </td>
   </tr>
   <tr>
-    <td>Deploy hooks</td><td>[[How To Use Deploy Hooks with AppCloud|use-deploy-hooks-with-engine-yard-appcloud]]</td>
+    <td>Deploy hooks</td><td>[[How To Use Deploy Hooks|use-deploy-hooks-with-engine-yard-cloud]]</td>
+  </tr>
+  <tr>
+    <td>Customizing Unicorn configuration (without keep files)</td><td>[[Customize Unicorn|customize-unicorn]]</td>
   </tr>
 </table>

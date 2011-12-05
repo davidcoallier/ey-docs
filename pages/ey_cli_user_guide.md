@@ -1,7 +1,7 @@
 # Engine Yard CLI User Guide
 
-Welcome to the user guide for deploying to Engine Yard AppCloud with the `engineyard` gem.  The `engineyard` gem provides a command line
-interface to perform tasks such as deploying your application, rebuilding your applications environment, opening an ssh session to 
+Welcome to the user guide for deploying to Engine Yard Cloud with the `engineyard` gem.  The `engineyard` gem provides a command line
+interface (CLI) to perform tasks such as deploying your application, rebuilding your applications environment, opening an ssh session to 
 any of your instances, uploading and applying custom chef recipes, and more.
 
 ## Getting Started
@@ -15,16 +15,13 @@ any of your instances, uploading and applying custom chef recipes, and more.
 3. Deploy your app:
         ey deploy
       
-4. You will be prompted for your EY AppCloud login (email address) and password. You'll only have to enter these once. 
+4. You will be prompted for your Engine Yard Cloud login (email address) and password. You'll only have to enter these once. 
     If your application is running in multiple environments, tack on `-e ENV_NAME` to disambiguate.
 - Congratulations! Your application is now deployed.
 
 
 ## Command Reference
 
-** Formatting Warning: ** This wiki renders two dashes (- -) as an em-dash (--). All single-letter options start with a single dash (e.g. -e), but all long options start with two dashes (- - environment). We are working on making this wiki not screw up the formatting. Until then, watch out for missing dashes.
-
-- - -
 #### `ey help`
 
    - Print a short help message.
@@ -52,7 +49,7 @@ any of your instances, uploading and applying custom chef recipes, and more.
       - `--ref/-r GIT-REF` (optional): the reference to deploy 
         - You can specify a branch, a tag, or a SHA. 
         - This argument defaults to the current branch. 
-        - Note: the deployment process pulls the code from the git remote that was previously entered into the EY AppCloud web application. Thus, the named branch must exist in that git remote for your deployment to succeed.
+        - **Note:** the deployment process pulls the code from the git remote that was previously entered into the Engine Yard Cloud web application. Thus, the named branch must exist in that git remote for your deployment to succeed.
     - `--branch`: alias for `--ref`
     - `--tag`: alias for `--ref`
     - `--app/-a NAME` (optional): the application to deploy. If the current working directory is inside the application's Git repository and `--app` is omitted, `ey` will infer the application from the configured Git remotes.
@@ -117,6 +114,21 @@ any of your instances, uploading and applying custom chef recipes, and more.
     - `--environment/-e NAME` (optional): the environment in which to place the recipes.
       - This argument may be specified by unambiguous substring.
 
+- - -
+#### `ey recipes download`
+
+  - Download custom chef recipes from an instance.
+
+  - Arguments: 
+    - `--environment/-e NAME` (optional): the environment to download the recipes from.
+      - This argument may be specified by unambiguous substring.
+    - `--account/-c ACCOUNT` (optional): the account that the environment belongs to.
+      - This argument may be specified by unambiguous substring.
+
+  - Use download on instances where you have previously uploaded recipes. For example, you might want to download custom chef recipes when troubleshooting--to review the recipes that you are running on your instance. 
+
+  - The recipes are unpacked into a directory called "cookbooks" in the current directory. If the cookbooks directory already exists, you get an error.
+
 - - - 
 #### `ey web disable`
 
@@ -139,14 +151,14 @@ any of your instances, uploading and applying custom chef recipes, and more.
 
   - This command has to be invoked from the application's Git repository so it can figure out which application gets its maintenance page taken down.
 
-  - For more information, see [[Maintenance Pages|maintenance_pages]].
+  - For more information, see [[Application maintenance pages|deployment-maintenance-pages]].
 
 
 ## Environment Variables
 
 
 * ### CLOUD_URL
-Location of Engine Yard AppCloud. Mainly used in development. Default is https://cloud.engineyard.com/
+Location of Engine Yard Cloud. Mainly used in development. Default is https://cloud.engineyard.com/
 
 * ### DEBUG
 Debug the engineyard gem (print a lot of stuff). Default is off.
@@ -159,24 +171,24 @@ If set, all commands (e.g. `ey deploy`, `ey rollback`) that require an SSH conne
 
 
 
-### `ey.yml` Customizations
+### ey.yml Customizations
 
-Extra customization can be accomplished with an `ey.yml` file. [[More about the ey.yml file.|ey_yml]]
+Extra customization can be accomplished with an `ey.yml` file. [[More about the ey.yml file.|customize-your-deployment#first]]
 
 #### Disable migrations
 
 To prevent the `rake db:migrate` for certain environments, add `migrate: false` to the environment section ey.yml:
 
-  environments:
-    YOUR-ENVIRONMENT-NAME-GOES-HERE:
-      migrate: false
+    environments:
+      YOUR-ENVIRONMENT-NAME-GOES-HERE:
+        migrate: false
 
 #### Exclude the .git directory
 
 If you have a large .git directory and you do not want it copied over on every deploy, add a `config/ey.yml` to your application's repository with the following contents:
 
-  environments:
-   YOUR-ENVIRONMENT-NAME-GOES-HERE:
-     copy_exclude:
-       - .git
+    environments:
+     YOUR-ENVIRONMENT-NAME-GOES-HERE:
+       copy_exclude:
+         - .git
 

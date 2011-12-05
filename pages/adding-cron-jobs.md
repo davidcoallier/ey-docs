@@ -1,20 +1,20 @@
-# Adding Cron Jobs
+# Adding cron jobs
 
-Adding a scheduled task (cron job) to your environment can be done via your dashboard.
+Adding a scheduled task (cron job) to your environment can be done via your Dashboard.
 The task will be added to your application master instance under the crontab of either your deploy user or the root user (you choose which) and will only run on the application master by default. This avoids any potential adverse effects of a task accidentally running multiple times on different instances.
 
 ## Adding a new job
 
 To add a new cron job
 
-  - Click **More Options** then click on **Crontabs** 
-  - You will then be presented with the **Scheduled Jobs** page
+  - On the Environment page, click Crontabs 
+  - You will then be presented with the Scheduled Jobs page
   - Give the job a name for reference
   - Enter the command to run (see notes on commands)
   - Choose which user's crontab to add this to
   - Define a schedule (if you are familiar with cron syntax, you may prefer to use the advanced interface)
-  - Click **Create**
-  - Return to your dashboard and click the **Update Instances** or **Deploy** button as prompted
+  - Click Create
+  - Return to your Dashboard and click the Update Instances or Deploy button as prompted
 
 ## Notes about commands
 
@@ -37,7 +37,7 @@ or for Rails 3:
 
     cd /data/appname/current && rails runner -e production 'SomeClass.method'
 
-## Advanced Usage
+## Advanced usage
 
 ### Running crons on different instances
 
@@ -53,7 +53,7 @@ A common requirement is to have cron jobs running on a utility instance, to achi
       end
     end
 
-Above, *instance_name* would be the name you gave your utility instance when you created it. The *task_name* is just a label for the job. (similar to how you would give the job a name via the dashboard). Note that the **minute** method is using the cron syntax to specify 'every 15 minutes' - you can also specify 'hour' and 'day' within the code block.
+Above, *instance_name* would be the name you gave your utility instance when you created it. The *task_name* is just a label for the job. (similar to how you would give the job a name via the Dashboard). Note that the **minute** method is using the cron syntax to specify 'every 15 minutes' - you can also specify 'hour' and 'day' within the code block.
 
 ### Lockrun
 
@@ -61,12 +61,12 @@ Any frequently scheduled jobs can sometimes potentially run longer than their sc
 
 To solve this common problem, we recommend the use of [[lockrun|http://unixwiz.net/tools/lockrun.html]]. Lockrun is not installed by default so you will need to install it as outlined in the [[manage UNIX packages|application_home]] article.
 
-Once you have lockrun installed on your instance(s), you can then use it in your cron jobs by writing the commands like this:
+After you have lockrun installed on your instance(s), you can then use it in your cron jobs by writing the commands like this:
 
     /usr/bin/lockrun --lockfile=/tmp/jobname.lockrun -- sh -c "cd /data/appname/current && rake RAILS_ENV=production some:task"
 
 
-## Troubleshooting cron issues
+<h2 id="trouble"> Troubleshooting cron issues</h2>
 
 ### Is cron running?
 

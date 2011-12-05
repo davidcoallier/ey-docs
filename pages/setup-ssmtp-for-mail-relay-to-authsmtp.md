@@ -1,6 +1,6 @@
-# Setup SSMTP for Mail Relay to AuthSMTP
+# Setup SSMTP for mail relay to AuthSMTP
 
-We do not provide SMTP email services from Engine Yard AppCloud because the entire EC2 IP space is black-listed by many spam services.
+We do not provide SMTP email services from Engine Yard Cloud because the entire EC2 IP space is black-listed by many spam services.
 
 Our recommendation is to get an account with one of the following providers:
 
@@ -9,9 +9,9 @@ Our recommendation is to get an account with one of the following providers:
   * [[AuthSMTP|http://www.authsmtp.com]]
   * [[SMTP.com|http://smtp.com]]
 
-Once you have your account set up, take note of your username/password and come back to this article.
+After you have your account set up, take note of your username/password and come back to this article.
 
-**NOTE**: If using AuthSMTP, go into the control panel and enable SSL access to your mail relay.
+**Note:** If using AuthSMTP, go into the control panel and enable SSL access to your mail relay.
 
 ## Steps to configure your instance
 

@@ -10,7 +10,7 @@ June 29th, 2011
 
 Phusion Passenger 3 is available with Beta support in AppCloud. (No sign-up required.)
 
-Passenger 3 brings substantial performance improvements over Passenger 2. For more information, see [[Using Passenger 3 with Engine Yard AppCloud|using-passenger-with-engine-yard-appcloud]].
+Passenger 3 brings substantial performance improvements over Passenger 2.
 
 
 
@@ -39,9 +39,9 @@ Fixed an issue where changes to the Domain Name field were not saved. Domain nam
 
 June 24th, 2011
 
-If you are new to AppCloud, test our sample repository and get the ToDo application up and running in your AppCloud account. 
+If you are new to AppCloud, test our sample repository and get the ToDo application up and running in your Engine Yard account. 
 
-Click Try our sample… to populate the Git Repository URI with the source code for the ToDo application.
+Click Try our sample... to populate the Git Repository URI with the source code for the ToDo application.
 
 ![Try our sample ToDo application](images/github_sample_repo.png)
 
@@ -60,11 +60,11 @@ Click !Update to update the stack. The message persists until the instance is ru
 
 
 
-<a href=#update11><h2 id="update11"> Minor: The dashboard is now application-centric </h2></a>
+<a href=#update11><h2 id="update11"> Minor: The Dashboard is now application-centric </h2></a>
 
 June 21st, 2011
 
-The dashboard has moved from an *environment*-centric user interface to an *application*-centric user interface. For more information about this change, see [[We’re Getting Application-centric!|http://www.engineyard.com/blog/2011/were-getting-application-centric/]]
+The Dashboard has moved from an *environment*-centric user interface to an *application*-centric user interface. For more information about this change, see [[We're Getting Application-centric!|http://www.engineyard.com/blog/2011/were-getting-application-centric/]]
 
 
 
@@ -110,11 +110,11 @@ Patched a bug fix from June 1st that was causing problems.
 
 
 
-<a href=#update5><h2 id="update5"> **Major:** High memory XL VM’s available </h2></a>
+<a href=#update5><h2 id="update5"> **Major:** High memory XL VM's available </h2></a>
 
 June 3rd, 2011
 
-You can now create high memory extra-large VM’s in your environment:
+You can now create high memory extra-large VM's in your environment:
 
 * High memory XL (64 bit)
 
@@ -153,12 +153,6 @@ Upgrading to rubygems 1.5.2 was breaking Rails applications. This issue was fixe
 
 
 
-
-<a href=#update1> <h2 id="update1"> **Major:** X-Forwarded-For SSL traffic enabled </h2></a>
-
-June 2nd, 2011
-
-You can now request Engine Yard Support to enable HTTPS support of X-Forwarded-For via stunneled feature.
 
 
 

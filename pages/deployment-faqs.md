@@ -1,7 +1,7 @@
 # Engine Yard Deployment FAQs
 
 
-* <a href="#appcloud-svn">Does AppCloud support deploying from an SVN repository?</a>
+* <a href="#cloud-svn">Does Engine Yard Cloud support deploying from an SVN repository?</a>
 * <a href="#cli-multiple"> Can I use the CLI with multiple accounts? </a>
 * <a href="#cli-ssh"> How do I use the CLI with separate SSH keys for each project? </a>
 * <a href="#deploy-log"> Where is the deploy log? </a>
@@ -10,12 +10,12 @@
 
 
 
-<h2 id="appcloud-svn"><a href="#appcloud-svn">Does AppCloud support deploying from an SVN repository?</a></h2>
+<h2 id="cloud-svn"><a href="#cloud-svn">Does Engine Yard Cloud support deploying from an SVN repository?</a></h2>
 
 SVN is not supported at this time. Git is the only supported 
-version control system for deployment on AppCloud. Your repository 
+version control system for deployment on Engine Yard Cloud. Your repository 
 will need to be ported to Git before your application can be 
-deployed on EY AppCloud. GitHub has a great article on porting 
+deployed on Engine Yard Cloud. GitHub has a great article on porting 
 an existing SVN repository to Git.
 
 
@@ -44,7 +44,7 @@ With a bit of shell aliasing, you can have `alice-ey` and `bob-ey` commands that
 
 
   - You can simply set an entry in your SSH config with the key you want set as the identity file for the correct hostname. 
-  - Copy the SSH url for the App Master of your cluster from the AppCloud web interface and just take the hostname from it. 
+  - Copy the SSH url for the App Master of your cluster from the UI and just take the hostname from it. 
   - Then create or modify `~/.ssh/config` with the following contents:
 
 
@@ -58,21 +58,18 @@ If you are using an elastic IP for your cluster, this hostname will not change a
 
 <h2 id="deploy-log"><a href="#deploy-log"> Where is the deploy log? </a></h2>
 
-If there is a problem deploying your application, the dashboard will 
-tell you to view the deploy log for the failed deployment.  You can 
+If there is a problem deploying your application, the Dashboard
+tells you to view the deploy log for the failed deployment.  You can 
 view the deploy log two ways:
 
-  * ### On your dashboard
-    Your dashboard will display a **View Log** hyperlink next to the deployment status message.
-    Clicking on this link will open the log file in a separate browser window for viewing.
+  * **On your Dashboard**. Your Dashboard displays a View Log link next to the deployment status message.  
+    Click this link to open the log file in a separate browser window.
     
-  * ### On your instances
-    View your log file by connecting to your instances via SSH. 
-    Once you are connected to your instance, you can locate the log file in your
+  * **On your instances**. View your log file by connecting to your instances via SSH. 
+    After you are connected to your instance, locate the log file in your
     home directory with a filename like the following: `yourapp-deploy.log`, where
     'yourapp' is the name of your application deployed on this instance.
 
-    <br />
     You can view the log using the UNIX commands `cat`, `more` or `less`.
 
 
