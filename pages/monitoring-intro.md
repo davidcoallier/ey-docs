@@ -33,3 +33,6 @@ environments as monitoring is disabled by default.
 
 * ### [[Using Pingdom to monitor an application|monitoring-pingdom]]
   Learn how to set up Pingdom to monitor uptime for an application.
+
+* ### [[Using Airbrake to monitor an application|monitoring-airbrake]]
+  Learn how to set up Airbrake to aggregate application errors to a web UI or an RSS feed.

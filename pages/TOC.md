@@ -85,6 +85,7 @@
   * [[HAProxy stats|haproxy-stats]]    
   * [[Monitoring with New Relic|monitoring-new-relic]]
   * [[Monitoring with Pingdom|monitoring-pingdom]]
+  * [[Monitoring with Airbrake|monitoring-airbrake]]
 * [[Database|database-intro]]
   * [[Introduction|database-intro]]
   * [[Find key information about databases|database-password]]
