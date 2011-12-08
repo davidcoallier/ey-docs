@@ -2,13 +2,57 @@
 
 The updates described are either important (where you need to take action) or of interest (you might want to know about these changes but you don't need to do anything). 
 
-<a href=#update3><h2 id="update3">Coming soon: Amazon EC2 System Update</h2></a>
+<a href=#update3><h2 id="update3">Action Req'd: Amazon EC2 System Update</h2></a>
 
-December 5th, 2011
+December 8th, 2011
 
-Amazon is in the process of applying patches to their systems. <b>At this time, no action is required.</b> However, to complete the patch process, your instances will need to be restarted. Amazon and Engine Yard are currently working on a plan to ensure this is as painless as possible. Engine Yard will provide more information on timeframes shortly.  In the meantime, here is some additional information from Amazon:
+Amazon is in the process of applying patches to their systems. To complete the patch process, your instances need to be restarted. 
+
+**Important!** Check your email for details about your environment and visit our [[AWS Reboot FAQs|aws-reboot-faqs]].
+
+Here is some additional information from Amazon:
 
 _We frequently upgrade our EC2 fleet, with many of our patches and upgrades being applied invisibly to customers.  However, some updates require instances to be restarted and we periodically reboot instances in order to apply these updates.  The upgrade we're currently rolling out to a portion of our fleet requires a short reboot of these customer instances.  We recently released our Scheduled Events functionality which allows customers to have greater visibility into when these reboots are happening going forward.    In addition to added visibility, this enables customers to manage reboots on their own schedule if they want to reboot before the scheduled update window.  This data is available for customers to easily see on the AWS management console as well as through the APIs.  Reboots such as these should be infrequent, but may be necessary from time to time to apply upgrades that strengthen our security, reliability and operational performance._
+
+<a href=#update7><h2 id="update7">Fix: engineyard gem update</h2></a>
+
+December 7th, 2011
+
+Version 1.4.13 of the engineyard gem fixes an issue with Gemfiles for private git repositories that use the deploy key.
+
+Previously, in certain cases, accessing private git repositories during bundle install failed when an instance was added that did not have GIT_SSH set correctly. This prevented the addition of new instances to a cluster.
+
+<a href=#update6><h2 id="update6"> Minor: Nginx and Passenger 3 upgrades</h2></a>
+
+December 6th, 2011
+
+* Upgraded Passenger 3 to Passenger 3.0.11.  
+* Upgraded Nginx to 1.0.10 except for Passenger 2 environments.
+
+**Note:** You must upgrade your environment to apply these changes.
+
+<a href=#update5><h2 id="update5"> Major: MySQL 5.5 is now available with Beta support</h2></a>
+
+December 6th, 2011
+
+MySQL 5.5 brings substantial feature and performance improvements over MySQL 5.0.
+
+For more information, see [[MySQL 5.5 is in Beta|http://www.engineyard.com/blog/2011/mysql-5-5-is-in-beta]] and [[Using MySQL 5.1 or MySQL 5.5 with Engine Yard Cloud|database-mysql-upgrade]].
+
+<a href=#update4><h2 id="update4"> Major: High availability for clustered environment now generally available</h2></a>
+
+December 6th, 2011
+
+With high availability, when you create an environment, Engine Yard Cloud automatically deploys your instances across different availability zones in an Amazon Web Services region.  Engine Yard balances the instances and ensures that master and slave instances are in separate zones.
+
+You might notice the following changes in the Engine Yard Cloud UI:  
+
+* When you create a new environment, you cannot choose a specific zone within a region; the zone is chosen automatically.  
+* You no longer get Amazon out-of-capacity errors.
+
+
+For more information, see [[High availability for clustered environments|environment-high-availability]].
+
 
 <a href=#update2><h2 id="update2"><b>Major:</b> Database slave instances can be sized differently from the database master instances</h2></a>
 
