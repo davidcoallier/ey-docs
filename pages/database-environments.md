@@ -15,9 +15,9 @@ This page describes how to:
 
 ##The best environment type for your database
 
-Engine Yard offers three environment configurations: Single Server, Basic Cluster, Custom (cluster). For database replication, you need a clustered configuration.
+Engine Yard offers three environment configurations: Single Instance, Basic Cluster, Custom (cluster). For database replication, you need a clustered configuration.
 
-* **Single Server.** For a small testing environment, a single server that contains both the application and the database is ideal. 
+* **Single Instance.** For a small testing environment, a single instance that contains both the application and the database is ideal. 
 * **Basic Cluster.** The basic cluster does not include a database slave.  
     In non-production environments or environments with small databases, a basic cluster is a good choice. With a basic cluster, the database is not replicated so make sure that you backup frequently.  
     You can add a database slave to an existing basic cluster (see [below][3]).  

@@ -4,14 +4,14 @@ Whenever Engine Yard Cloud creates an environment, it creates a MySQL or Postgre
 
 When you set up your environment, make sure that you enable email alerts so that when your /db volume starts to fill up or if you database instance is under too much load, you receive an alert. 
 
-The /db volume size and load capacity of your environment depends on whether you are using a single server, basic cluster, or configured environment. (See table below.)
+The /db volume size and load capacity of your environment depends on whether you are using a single instance, basic cluster, or configured environment. (See table below.)
 
 <table>
   <tr>
     <th>Environment</th><th>Default size of EBS database volume, /db</th><th>Database instance</th>
   </tr>
   <tr>
-    <td>Single server</td><td>15 GB </td><td>5 ECU  (application server with local database)</td>
+    <td>Single instance</td><td>15 GB </td><td>5 ECU  (application server with local database)</td>
   </tr>
   <tr>
     <td>Basic cluster</td><td>15 GB </td><td>5 ECU  (dedicated database instance)</td>
@@ -33,7 +33,7 @@ You might want to check on database volume usage _before_ you get an alert.
 
 ###To check the database volume usage 
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).  
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).  
 2. Type:  
         df -h
     ![/db usage](images/database_usage.png)

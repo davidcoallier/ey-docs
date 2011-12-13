@@ -35,7 +35,7 @@ After you've setup the deploy key, you're ready to fine tune your environment. O
 
 After your have finished configuring your environment, click "Create Environment" 
 
-You are now at the deployment screen for your environment. Here you can select if you wish to run your application on a single server or as a cluster. You can also choose to boot from previous snapshots of your application if they exist.
+You are now at the deployment screen for your environment. Here you can select if you wish to run your application on a single instance or as a cluster. You can also choose to boot from previous snapshots of your application if they exist.
 
 Finally, select the external address of your application and click "Boot this Configuration"
 

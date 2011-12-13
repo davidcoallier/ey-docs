@@ -8,7 +8,7 @@ Unless you stopped your environment before upgrading, the instance that your Fre
 
 ##Adding capacity to your account
 
-Trial accounts provide users with a single High-CPU Medium instance (single server).  While this configuration provides more than sufficient capacity for developing your application, many customers will want to add additional capacity when going to production. To grow from a single instance to a cluster, you will need to be in a position where you can safely bring your application down for a few minutes without disrupting your developers or users. The next step is to determine what kind of environment you'd like to configure. Options include a **single instance** (this is what you currently have), a **basic cluster** or a **custom environment**.
+Trial accounts provide users with a single High-CPU Medium instance (single instance).  While this configuration provides more than sufficient capacity for developing your application, many customers will want to add additional capacity when going to production. To grow from a single instance to a cluster, you will need to be in a position where you can safely bring your application down for a few minutes without disrupting your developers or users. The next step is to determine what kind of environment you'd like to configure. Options include a **single instance** (this is what you currently have), a **basic cluster** or a **custom environment**.
 
 ###Using cluster-based architectures to improve scalability
 
@@ -24,7 +24,7 @@ This will cause a snapshot to be taken of the current **/data** and **/db** dire
 
 ![Boot Instance](images/02_boot_instance.png)
 
-Next, choose **Boot** to configure and create new instances. You’re presented with three choices: **Single Server** (what you started with), **Basic Cluster** (separate application and database instances), and **Custom**. For this example, we will choose Custom.
+Next, choose **Boot** to configure and create new instances. You’re presented with three choices: **Single Instance** (what you started with), **Basic Cluster** (separate application and database instances), and **Custom**. For this example, we will choose Custom.
 
 ![Configuration](images/03_configuration.png)
 

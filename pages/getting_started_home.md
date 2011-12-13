@@ -52,7 +52,7 @@ The final step is to select the servers you would like to boot for this environm
 
 We recommended starting with a **Basic Cluster** in almost all cases. This will give you room to expand in the future and also allows us to implement takeovers if your application master server goes down. 
 
-If this is a staging environment without strict uptime requirements and which you don't expect to grow in the future, a **Single Server** environment is recommended.
+If this is a staging environment without strict uptime requirements and which you don't expect to grow in the future, a **Single Instance** environment is recommended.
 
 If you have larger needs right now, please select **Custom** and configure your cluster as necessary. 
 

@@ -27,25 +27,27 @@ roles include the following:
 
 <h2 id="app-instance">Application instances</h2>
 
-These instances are configured to run your ruby based application. They're configured with 
+These instances are configured to run your Ruby-based application. They're configured with 
 the Engine Yard stack. Your application will automatically be deployed onto the `/data` mount 
 which is persistent storage.
 
 We backup the `/data` volume only on the **application master** instance. 
 
-You can run [[crons|adding-cron-jobs]] on your Application instances and you can setup crons to run on the application master instance via the web UI's Crontab page. If your crons are CPU or Memory intensive you might consider off loading the work to a Utility Instance.
+You can run [[crons|adding-cron-jobs]] on your Application instances and you can setup crons to run on the application master instance via the web UI's Crontab page. If your crons are CPU or memory intensive, consider off loading the work to a utility instance.
 
 <h2 id="db-instance">Database instances</h2>
 
-This instance is configured to run your database. Running your database on a separate server prevents your database and application from contending for the same resources. 
+This instance is configured to run your database. Running your database on a separate instance prevents your database and application from contending for the same resources. 
 
-MySQL is currently the only supported database on Engine Yard Cloud. If you need to run a postgres DB you'll have to set it up via a custom chef recipe. Here's a template to get you started: http://github.com/engineyard/ey-cloud-recipes/tree/master/cookbooks/postgres/
+The MySQL database is fully supported on Engine Yard Cloud. The PostgreSQL database is supported as part of the Early Access program.
 
 Your database resides on the `/db` mount. This mount point is persistent and can be used to restore your database later. We take regular snapshots and backups of your database by default.
 
+For more information about databases and database instances, see [[Managing your database|database-intro]]
+
 <h2 id="util-instance">Utility instances</h2>
 
-Utility instances are great for off loading any heavy work from your application instances. It's common to run background jobs, job queues, and crons on utility instances. They are also useful for running large memcached instances. 
+Utility instances are great for off loading heavy work from your application instances. It's common to run background jobs, job queues, and crons on utility instances. They are also useful for running large memcached instances. 
 
 We automatically push your code to the utility instances with each deploy for you. This allows your crons and background jobs to access any application code that they need.
 

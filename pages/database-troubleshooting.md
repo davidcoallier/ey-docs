@@ -16,7 +16,7 @@ If you change database configuration, you might need to restart the database.
 
 **To restart the MySQL database** 
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).
 
 2. Type:  
         sudo /etc/init.d/mysql restart
@@ -48,7 +48,7 @@ Run the FLUSH HOSTS command, either through the mysql client or through mysqladm
 
 **To run the FLUSH HOSTS command**  
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).
 
 2. Type:  
         mysql -u root -pMyP4ssW0rd -e "FLUSH HOSTS;"
@@ -88,7 +88,7 @@ If you change database configuration, you might need to restart the database.
 
 ###To restart the PostgreSQL database
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).
 
 2. Type:  
         sudo /etc/init.d/postgresql-x.x restart

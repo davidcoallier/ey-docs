@@ -17,7 +17,7 @@ This assumes that you are logged into your Master Database instance and you want
 
 ###MySQL: To restore your database (eybackup method)
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).  
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).  
 
 2. Type (to list the backups):
 
@@ -46,7 +46,7 @@ To restore a PostgreSQL database without eybackup
 1. [[Download the backup file.|database-download]]  
 2. [Load the backup file into a PostgreSQL database.][B]
 
-<!-- 1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).  
+<!-- 1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).  
 
 2. Type (to list the backups):
 
@@ -88,7 +88,7 @@ This scenario assumes that you are moving data from one environment (or instance
 
         scp myapp.2011-11-14T16-47-02.sql.gz deploy@ec2-174-129-17-196.compute-1.amazonaws.com:/tmp/mysql/dumpfile.sql
 
-2. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment), and change to the directory where you copied the database backup file in Step 1 (e.g.`cd /tmp/mysql`).
+2. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment), and change to the directory where you copied the database backup file in Step 1 (e.g.`cd /tmp/mysql`).
 
 3. Import the database backup file to the database:
 
@@ -98,7 +98,7 @@ This scenario assumes that you are moving data from one environment (or instance
     where
     `[username]` is the user for the database instance. The default user for the Engine Yard Cloud database is `deploy`.  
     `[password]` is the password for the user on the MySQL database.  
-    `[database host]` is the hostname of the database instance. In a single server environment, you can type `localhost` for the database hostname.  
+    `[database host]` is the hostname of the database instance. In a single instance environment, you can type `localhost` for the database hostname.  
     `[app_name]` is the name of the database.  
     `[filename]` is the name of the database backup file.  
      
@@ -123,7 +123,7 @@ This scenario assumes that you are moving data from one environment (or instance
 
         scp myapp.2011-11-18T12-20-03.pgz deploy@ec2-172-16-139-19.us-west-1.compute.amazonaws.com:/tmp/postgres/dumpfile.pgz
 
-2. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment), and change to the directory where you copied the database backup file in Step 1 (e.g.`cd /tmp/postgres`).
+2. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment), and change to the directory where you copied the database backup file in Step 1 (e.g.`cd /tmp/postgres`).
 
 3. Import the database backup file to the database:  
         pg_restore -d [app_name] [filename] --clean -U postgres

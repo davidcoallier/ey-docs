@@ -23,7 +23,7 @@ For new environments, the default configuration is now a Basic Cluster of:
 * 2 medium application servers  
 * 1 medium database server  
 
-Previously, the default environment was the Single Server configuration, and the Basic Cluster had only one application server (and one database server).
+Previously, the default environment was the Single Instance configuration, and the Basic Cluster had only one application server (and one database server).
 
 
 

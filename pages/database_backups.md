@@ -39,7 +39,7 @@ You perform on-demand backups using the eybackup tool. Each instance comes with 
 
 ## To back up a MySQL database on-demand 
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).  
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).  
 2. Type:  
         sudo -i eybackup -e mysql --new-backup
     or
@@ -48,7 +48,7 @@ You perform on-demand backups using the eybackup tool. Each instance comes with 
 
 ## To back up a PostgreSQL database on-demand 
 
-1. Via SSH, connect to the application and database instance (for single server environment) or the master database instance (for a clustered environment).  
+1. Via SSH, connect to the application and database instance (for single instance environment) or the master database instance (for a clustered environment).  
 2. Type:  
         sudo -i eybackup -e postgresql --new-backup
 	or
