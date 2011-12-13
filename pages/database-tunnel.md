@@ -56,7 +56,7 @@ The syntax for creating the SSH tunnel is `ssh -L [local port]:[database host]:[
         
 ###To create and test the SSH tunnel for a PostgreSQL database
 
-1. In a terminal window on your local machine, type
+1. In a terminal window on your local machine, type:
 		
 	    ssh -L 5433:ec2-172-16-139-19.us-west-1.compute.amazonaws.com:5432 deploy@ec2-172-16-139-19.us-west-1.compute.amazonaws.com
 
