@@ -22,12 +22,9 @@ You need an Airbrake account. Airbrake offers several tiers of service, includin
 1. Navigate to [[airbrakeapp.com|http://www.airbrakeapp.com]].
 2. Sign up for an account.
 
-<!-- Are there any accounts that won't work with Engine Yard?
-     What do I enter for Subdomain for an account that works well with a simple Engine Yard application?   -->
-
 <h2 id="topic3">Add the airbrake gem </h2>
 
-Add the airbrake gem to your Gemfile, then run bundle install.
+Add the airbrake gem to your Gemfile in your local environment, and then run bundle install.
 
 ###To install the airbrake gem for a Rails 3.x application
 
@@ -45,25 +42,24 @@ If so, do we need to modify the command? "~> 3.0.rc2" -->
 
 <h2 id="topic4">Configure your application to use Airbrake</h2>
 
-<!-- You will then need to configure Airbrake with your API key. This key is displayed on first screen when you login to Airbrake (along with the other commands listed here)
-
-    script/rails generate airbrake --api-key [API KEY]
-
-When you run the generate script it will throw a test error, this error should be reported by Airbrake and demonstrates  that the setup was successful. -->
+You need to create a project in Airbrake and add the project's API to your Ruby application. 
 
 
 ###To configure your application to use Airbrake
 
-1. Log into your Airbrake account and copy the API key.  
-    The key is displayed on the home page for your account.
-    [screenshot]
+1. Log into your Airbrake account.
 
-2. Type:  
-        script/rails generate airbrake --api-key [API KEY]
-    for example:  
-        script/rails generate airbrake --api-key xxxx
+2. Create a project.
 
-    <!-- Where does the above get typed get typed?  -->
+3. Copy the API key.  
+    ![The API key that appears in step 3 of the Airbrake project](images/airbrake_api_key.png)
+
+2. Run this command in your local Rails root directory:    
+        script/rails generate airbrake --api-key API_Key
+    
+    Where API_Key is the full key (as shown in Step 3).  
+    For example:  
+        script/rails generate airbrake --api-key 5eb82ba445b692f7dd89ff84c8a551ea
 
     This script creates a test error that is reported by Airbrake.
 
