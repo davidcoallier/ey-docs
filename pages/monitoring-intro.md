@@ -33,3 +33,6 @@ environments as monitoring is disabled by default.
 
 * ### [[Using Pingdom to monitor an application|monitoring-pingdom]]
   Learn how to set up Pingdom to monitor uptime for an application.
+
+* ### [[JRuby only: Using VisualVM to monitor your application|monitoring-with-visualvm]]
+  Learn how to monitor your JRuby application with VisualVM.
