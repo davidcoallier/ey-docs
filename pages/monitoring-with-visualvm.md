@@ -15,16 +15,17 @@ If you have a JRuby application deployed on Engine Yard Cloud, you can monitor t
 
 2. Use rvm to open a JRuby development environment in your local machine.
 
-3. Install the `engineyard` gem: 
+3. Install the `engineyard-visualvm` gem: 
         gem install engineyard-visualvm
 
 3. Type:  
         ey-visualvm start --environment environment_name
-   where environment name is the name of the Engine Yard Cloud environment where you are running the JRuby application. For example, `ey-visualvm start --environment myenvironment`
+   where `environment_name` is the name of the Engine Yard Cloud environment where you are running the JRuby application. For example,  
+        ey-visualvm start --environment myenvironment
 
     You might be prompted for your Engine Yard account username and password.
 
-    This creates an SSH tunnel between your local machine and your deployed JRuby application. VisualVM automatically opens and you can inspect and monitor the application.
+    The ey-visualvm gem creates an SSH tunnel between your local machine and your deployed JRuby application. VisualVM automatically opens, and you can inspect and monitor the application.
 
 
 <h2 id="topic5"> More information</h2>
