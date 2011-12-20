@@ -20,8 +20,7 @@ If you have a JRuby application deployed on Engine Yard Cloud, you can monitor t
 
 3. Type:  
         ey-visualvm start --environment environment_name
-   where environment name is the name of the Engine Yard Cloud environment where you are running the JRuby application.  
-   For example, `ey-visualvm start --environment myenvironment`
+   where environment name is the name of the Engine Yard Cloud environment where you are running the JRuby application. For example, `ey-visualvm start --environment myenvironment`
 
     You might be prompted for your Engine Yard account username and password.
 
