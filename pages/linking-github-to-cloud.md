@@ -2,7 +2,7 @@
 
 You can link your Engine Yard account to a GitHub account. 
 
-The _advantage_ of linking your Engine Yard account to a GitHub account is that you don't need to cut-and-paste deploy keys if the accounts are linked. 
+The _advantage_ of linking your Engine Yard account to a GitHub account is that you don't need to cut-and-paste deploy keys (SSH keys) if the accounts are linked. 
 
 The _disadvantage_ of linking your Engine Yard account to a GitHub account is that it gives your Engine Yard Cloud collaborators read access to **all** repositories in that GitHub account. 
 

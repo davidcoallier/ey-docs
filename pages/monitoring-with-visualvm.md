@@ -11,7 +11,8 @@ If you have a JRuby application deployed on Engine Yard Cloud, you can monitor t
 
 
 1. Deploy your JRuby application on Engine Yard Cloud.  
-    **Note:** Set the runtime to JRuby 1.6.5 (ruby-1.8.7-p330). VisualVM is not compatible with Ruby 1.9.
+    **Note:** Set the runtime to JRuby 1.6.5 (ruby-1.8.7-p330). VisualVM is not compatible with Ruby 1.9.  
+    Make sure that you have selected SSH keys for the environment, i.e. you can SSH into your environment. 
 
 2. Use rvm to open a JRuby development environment in your local machine.
 
@@ -35,9 +36,10 @@ If you have a JRuby application deployed on Engine Yard Cloud, you can monitor t
 	    <th>For more information about...</th><th>See...</th>
 	  </tr>
 	  <tr>
-	    <tr>
 		    <td>deploying a JRuby application on Engine Yard Cloud</td><td>[[Using JRuby on Engine Yard Cloud|deploy-jruby]].</td>
-		 </tr>
+		</tr>
+		<tr>
+			<td>SSH keys</td><td><li>[[Install a public key to an environment|ssh-install]]</li><li> [[Using SSH on Engine Yard Cloud|ssh-intro]]</li><li>[[Linking a GitHub account to an Engine Yard account|linking-github-to-cloud]]</li>
 		<tr>
 		<td>connecting VisualVM with your Engine Yard Cloud application</td><td>[[VisualVM on Engine Yard Cloud|http://vimeo.com/33750907]].</td>
 	  </tr> 
