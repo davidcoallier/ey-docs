@@ -9,6 +9,7 @@ These features are in **Beta**:
 
 These features are in **Alpha**:  
 
+* [[Services|services-intro]]
 * [[Rubinius|rubinius]] - [[Sign up|signup-rubinius]]
 * [[MySQL 5.1|database-mysql-upgrade]] - [[Sign up|signup-mysql]]
 * [[PostgreSQL 9|postgresql]] - [[Sign up|signup-postgresql]]
