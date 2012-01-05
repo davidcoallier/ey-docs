@@ -6,7 +6,7 @@ The full account includes the following features that are not available in the t
 
 * Multiple environments and multiple applications
 * Customizable environments
-* Pre-release Alpha and Beta features
+* Access to all Alpha and Labs features
 * New Relic monitoring
 * Support plan options
 * No time limit
